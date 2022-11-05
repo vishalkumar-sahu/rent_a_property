@@ -1,0 +1,24 @@
+{
+  "name": "rent-a-property",
+  "version": "1.0.0",
+  "description": "rent-property",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "start": "node app.js",
+    "client": "cd client && npm start",
+    "dev": "concurrently -n 'server,client' -c 'red,green' \"nodemon app.js\" \"npm run client\""
+  },
+  "keywords": [
+    "rent"
+  ],
+  "author": "Vishal Kumar Sahu",
+  "license": "ISC"
+}
